@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcervill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 21:42:53 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/23 21:47:45 by pcervill         ###   ########.fr       */
+/*   Created: 2022/03/24 19:21:05 by pcervill          #+#    #+#             */
+/*   Updated: 2022/03/24 20:20:43 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <string.h>
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	contdst;
+	int	cont;
 
-	contdst = 0;
-	while (src[contdst])
-		contdst++;
+	cont = 0;
+	while (s[cont])
+	{
+		if (s[cont] == c)
+			return ((char *)s + cont);
+		cont++;
+	}
+	if (c == '\0')
+		return ((char *)s + cont);
+	return (NULL);
 }

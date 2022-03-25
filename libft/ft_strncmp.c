@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 13:04:52 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 00:16:06 by pcervill         ###   ########.fr       */
+/*   Created: 2022/03/24 22:58:49 by pcervill          #+#    #+#             */
+/*   Updated: 2022/03/25 00:42:07 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	a;
+	size_t	cont;
 
-	a = 0;
-	while (a < n)
+	cont = 0;
+	while (cont < n)
 	{
-		((unsigned char *)dst)[a] = ((unsigned char *)src)[a];
-		a++;
+		if (s1[cont] == s2[cont])
+			cont++;
+		else
+			return ((int)s1[cont] - (int)s2[cont]);
 	}
-	return (dst);
+	return (0);
 }

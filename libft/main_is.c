@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_is.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:05:13 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/21 12:32:06 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/25 00:36:15 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(void)
 	c1 = 73;
 	c2 = 160;
 	c3 = 100;
+	printf("\n--------FUNCION ISASCII--------\n");
 	printf("Funcion original: %d\n", isascii(c));
 	printf("Mi	funcion: %d\n", ft_isascii(c));
 	printf("Funcion original: %d\n", isascii(c1));
@@ -37,4 +38,35 @@ int	main(void)
 	printf("Mi	funcion: %d\n", ft_isascii(c2));
 	printf("Funcion original: %d\n", isascii(c3));
 	printf("Mi	funcion: %d\n", ft_isascii(c3));
+	printf("----------FIN ISASCII----------\n");
+	printf("\n--------FUNCION ISDIGIT--------\n");
+	printf("Funcion original: %d\n", isascii(c));
+	printf("Mi	funcion: %d\n", ft_isascii(c));
+	printf("Funcion original: %d\n", isascii(c1));
+	printf("Mi	funcion: %d\n", ft_isascii(c1));
+	printf("Funcion original: %d\n", isascii(c2));
+	printf("Mi	funcion: %d\n", ft_isascii(c2));
+	printf("Funcion original: %d\n", isascii(c3));
+	printf("Mi	funcion: %d\n", ft_isascii(c3));
+	printf("----------FIN ISDIGIT----------\n");
+	printf("\n--------FUNCION ISALNUM--------\n");
+	printf("Funcion original: %d\n", isascii(c));
+	printf("Mi	funcion: %d\n", ft_isascii(c));
+	printf("Funcion original: %d\n", isascii(c1));
+	printf("Mi	funcion: %d\n", ft_isascii(c1));
+	printf("Funcion original: %d\n", isascii(c2));
+	printf("Mi	funcion: %d\n", ft_isascii(c2));
+	printf("Funcion original: %d\n", isascii(c3));
+	printf("Mi	funcion: %d\n", ft_isascii(c3));
+	printf("----------FIN ISALNUM----------\n");
+	printf("\n--------FUNCION ISALPHA--------\n");
+	printf("Funcion original: %d\n", isascii(c));
+	printf("Mi	funcion: %d\n", ft_isascii(c));
+	printf("Funcion original: %d\n", isascii(c1));
+	printf("Mi	funcion: %d\n", ft_isascii(c1));
+	printf("Funcion original: %d\n", isascii(c2));
+	printf("Mi	funcion: %d\n", ft_isascii(c2));
+	printf("Funcion original: %d\n", isascii(c3));
+	printf("Mi	funcion: %d\n", ft_isascii(c3));
+	printf("----------FIN ISALPHA----------\n");
 }
