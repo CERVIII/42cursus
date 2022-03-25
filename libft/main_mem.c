@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 13:46:35 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 00:28:05 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/25 16:38:13 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ int	main(void)
 	char	dst1[] = "Hola mundo";
 	char	dst2[] = "Hola mundo";
 	char	dst3[] = "Hola mundo";
+	char	dst4[] = "Hola mundo";
+	char	dst5[] = "Hola mundo";
 	char	src[] = "En un lugar de la mancha";
 	int		c;
 	size_t	len;
 
-	c = '$';
+	c = 'l';
 	len = 4;
 	printf("\n---------FUNCION BZERO----------\n");
 	bzero(b, len);
@@ -55,5 +57,11 @@ int	main(void)
 	printf("Funcion original: %s\n", dst2);
 	ft_memmove(dst3, src, len);
 	printf("Mi	 funcion: %s\n", dst3);
+	printf("--------------FIN---------------\n");
+	printf("\n---------FUNCION MEMCHR--------\n");
+	memchr(dst4, c, len);
+	printf("Funcion original: %s\n", dst4);
+//	ft_memchr(dst5, c, len);
+	printf("Mi	 funcion: %s\n", dst5);
 	printf("--------------FIN---------------\n");
 }

@@ -6,10 +6,11 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 13:37:55 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/24 14:21:07 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/25 22:54:15 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')

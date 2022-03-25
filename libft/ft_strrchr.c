@@ -6,10 +6,11 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 22:29:57 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/24 22:56:44 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/25 22:53:50 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 char	*ft_strrchr(const char *s, int c)

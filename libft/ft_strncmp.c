@@ -6,10 +6,11 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 22:58:49 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 00:42:07 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/25 22:53:31 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

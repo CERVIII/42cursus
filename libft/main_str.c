@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 13:16:05 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 00:58:18 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/25 14:23:44 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,30 @@ int	main(void)
 	char	dst3[] = "Hola que tal";
 	char	dst4[] = "Hola que tal";
 	char	dst5[] = "Hola que tal";
-	char	dst6[] = "Hola que tal";
-	char	dst7[] = "Hola que tal";
-	size_t	dstsize;
+	char	dst6[100] = "Hola que tal";
+	char	dst7[100] = "Hola que tal";
+	size_t	dstsizecpy;
+	size_t	dstsizecat;
 	int		c;
 
-	dstsize = 5;
+	dstsizecpy = 5;
+	dstsizecat = 48;
 	c = 'a';
 	printf("\n---------FUNCION STRLEN---------\n");
 	printf("Funcion original: %lu\n", strlen(src));
 	printf("Mi	 funcion: %lu\n", ft_strlen(src));
 	printf("-----------FIN STRLEN-----------\n");
 	printf("\n---------FUNCION STRLCPY---------\n");
-	printf("Funcion original: %lu\n", strlcpy(dst, src, dstsize));
-	printf("Mi	 funcion: %lu\n", ft_strlcpy(dst1, src, dstsize));
+	printf("Funcion original: %lu\n", strlcpy(dst, src, dstsizecpy));
+	printf("Mi	 funcion: %lu\n", ft_strlcpy(dst1, src, dstsizecpy));
 	printf("dest : %s\n", dst);
 	printf("dest1: %s\n", dst1);
 	printf("-----------FIN STRLCPY-----------\n");
 	printf("\n---------FUNCION STRLCAT---------\n");
-//	printf("Funcion original: %lu\n", strlcat(dst6, src, dstsize));
-//	printf("Mi	 funcion: %lu\n", ft_strlcat(dst7, src, dstsize));
-//	printf("dest : %s\n", dst6);
-//	printf("dest1: %s\n", dst7);
+	printf("Funcion original: %lu\n", strlcat(dst6, src, dstsizecat));
+	printf("Mi	 funcion: %lu\n", ft_strlcat(dst7, src, dstsizecat));
+	printf("dest : %s\n", dst6);
+	printf("dest1: %s\n", dst7);
 	printf("-----------FIN STRLCAT-----------\n");
 	printf("\n---------FUNCION STRCHR---------\n");
 	printf("Funcion original: %s\n", strchr(dst2, c));
@@ -61,8 +63,7 @@ int	main(void)
 	printf("Mi	 funcion: %s\n", ft_strrchr(dst5, c));
 	printf("-----------FIN STRRCHR-----------\n");
 	printf("\n---------FUNCION STRNCMP---------\n");
-	printf("Funcion original: %d\n", strncmp(dst, dst1, dstsize));
-	printf("Mi	 funcion: %d\n", ft_strncmp(dst, dst1, dstsize));
+	printf("Funcion original: %d\n", strncmp(dst, dst1, dstsizecpy));
+	printf("Mi	 funcion: %d\n", ft_strncmp(dst, dst1, dstsizecpy));
 	printf("-----------FIN STRNCMP-----------\n");
-
 }
