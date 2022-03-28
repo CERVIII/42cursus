@@ -14,10 +14,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	snumber(int numsign, int number/*, int sign*/)
+int	snumber(int numsign, long int number/*, int sign*/)
 {
-	if (numsign > 1) /* || (number = 2147483648)
-	|| (number == 2147483647 && sign != 1))*/
+	if (numsign > 1) /* || (number > 2147483647 && sign == 1))*/
+		number = -1;
+	else if (number > 2147483648 && sign != 1)
 		number = 0;
 	return (number);
 }
@@ -26,7 +27,7 @@ int	ft_atoi(const char *nptr)
 {
 	int	numsign;
 	int	sign;
-	int	number;
+	long int	number;
 
 	while ((*nptr == ' ') || (*nptr >= 7 && *nptr <= 13))
 		nptr++;
