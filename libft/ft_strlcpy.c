@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:29:06 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 22:52:54 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/28 18:45:14 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	while (src[contstr])
 		contstr++;
 	a = 0;
-	while (a < dstsize - 1)
+	if (dstsize < 1)
+		return (contstr);
+	while (a < dstsize - 1 && src[a])
 	{
 		dst[a] = src[a];
 		a++;

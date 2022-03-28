@@ -6,55 +6,43 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 22:59:20 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/28 00:38:45 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/28 13:21:28 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-int	snumber(int numsign, int number/*, int sign*/)
+int	snumber(unsigned long int number, int sign)
 {
-	if (numsign > 1) /* || (number = 2147483648)
-	|| (number == 2147483647 && sign != 1))*/
+	if (number > 2147483648 && sign == 1)
 		number = 0;
+	else if (number > 2147483647 && sign != 1)
+		number = -1;
 	return (number);
 }
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
-	int	numsign;
-	int	sign;
-	int	number;
+	unsigned long int	number;
+	int					sign;
 
-	while ((*nptr == ' ') || (*nptr >= 7 && *nptr <= 13))
-		nptr++;
+	while ((*str == ' ') || (*str >= 7 && *str <= 13))
+		str++;
 	sign = 0;
-	numsign = 0;
-	while (*nptr == '+' || *nptr == '-')
+	if (*str == '+' || *str == '-')
 	{
-		if (*nptr == '-')
+		if (*str == '-')
 			sign++;
-		nptr++;
-		numsign++;
+		str++;
 	}
 	number = 0;
-	while (*nptr >= '0' && *nptr <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		number = 10 * number + (*nptr - 48);
-		nptr++;
+		number = 10 * number + (*str - 48);
+		str++;
 	}
-	number = snumber(numsign, number/*, sign*/);
+	number = snumber(number, sign);
 	if (sign == 1)
 		return (number * -1);
 	return (number);
-}
-
-int	main(void)
-{
-	char str[60] = "	 	   -2147483647";
-	char str1[60] = "	 	   -99999999999999999";
-	printf("Mi función: %d\n", ft_atoi(str));
-	printf("Funcion original: %d\n", atoi(str1));
 }

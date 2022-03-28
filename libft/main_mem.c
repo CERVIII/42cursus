@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 13:46:35 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 16:38:13 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/28 14:14:47 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 int	main(void)
 {
@@ -33,7 +34,7 @@ int	main(void)
 	size_t	len;
 
 	c = 'l';
-	len = 4;
+	len = 7;
 	printf("\n---------FUNCION BZERO----------\n");
 	bzero(b, len);
 	printf("Funcion original: %s\n", b);
@@ -59,9 +60,8 @@ int	main(void)
 	printf("Mi	 funcion: %s\n", dst3);
 	printf("--------------FIN---------------\n");
 	printf("\n---------FUNCION MEMCHR--------\n");
-	memchr(dst4, c, len);
-	printf("Funcion original: %s\n", dst4);
-//	ft_memchr(dst5, c, len);
-	printf("Mi	 funcion: %s\n", dst5);
+	printf("Funcion original: %s\n", memchr(dst4, c, len));
+	ft_memchr(dst5, c, len);
+	printf("Mi	 funcion: %s\n", ft_memchr(dst5, c, len));
 	printf("--------------FIN---------------\n");
 }
