@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/03/28 20:08:29 by pcervill         ###   ########.fr        #
+#    Updated: 2022/03/28 23:23:33 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SONAME	=	libft.so
 SRC		= 	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 		  	ft_isprint.c ft_memchr.c ft_memcpy.c ft_memmove.c ft_memset.c \
 			ft_strchr.c	ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
-			ft_strrchr.c ft_tolower.c ft_toupper.c ft_atoi.c ft_memcmp.c
+			ft_strrchr.c ft_tolower.c ft_toupper.c ft_atoi.c ft_memcmp.c \
+			ft_strnstr.c
 
 OBJ 	= 	$(SRC:%.c=%.o)
 
@@ -47,7 +48,7 @@ clean:
 	$(RM) $(OBJ)
 
 fclean:
-	$(RM) $(NAME) $(SONAME)
+	$(RM) $(NAME) $(SONAME) $(OBJ)
 
 re: fclean all
 
