@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/03/28 23:23:33 by pcervill         ###   ########.fr        #
+#    Updated: 2022/03/28 23:33:46 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) -c $(CFLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJ)
+	gcc -shared -o $(NAME) $(OBJ)
 
 ####TARGETS####
 

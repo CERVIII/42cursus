@@ -6,15 +6,11 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:19:29 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 18:35:05 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/28 23:43:20 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-
-int	ft_toupper(int c);
-int	ft_tolower(int c);
+#include "libft.h"
 
 int	main(void)
 {
