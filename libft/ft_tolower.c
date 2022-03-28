@@ -6,14 +6,15 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:00:00 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 22:54:02 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/27 18:31:55 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		c += 32;
+		return (c + 32);
 	return (c);
 }

@@ -6,14 +6,15 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 13:37:55 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 22:54:15 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/03/27 00:00:15 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
+	if (c >= 97 && c <= 122)
+		return (c - 32);
 	return (c);
 }
