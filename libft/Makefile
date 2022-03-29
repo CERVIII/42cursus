@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/03/28 23:33:46 by pcervill         ###   ########.fr        #
+#    Updated: 2022/03/29 21:35:29 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,10 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) -c $(CFLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJ)
-	gcc -shared -o $(NAME) $(OBJ)
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o $(SONAME) $(OBJ)
 
 ####TARGETS####
 
@@ -49,12 +52,9 @@ clean:
 	$(RM) $(OBJ)
 
 fclean:
-	$(RM) $(NAME) $(SONAME) $(OBJ)
+	$(RM) $(NAME) $(SONAME) 
+	$(RM) $(OBJ)
 
-re: fclean all
+re: fclean all so
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o $(SONAME) $(OBJ)
-
-.PHONY: fclean all clean re
+.PHONY: fclean all clean re so
