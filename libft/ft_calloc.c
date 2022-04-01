@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 21:21:18 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/31 19:48:04 by pcervill         ###   ########.fr       */
+/*   Created: 2022/03/31 18:23:27 by pcervill          #+#    #+#             */
+/*   Updated: 2022/03/31 18:30:34 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	contn;
+	void	*str;
 
-	if (*needle == 0)
-		return ((char *)haystack);
-	contn = ft_strlen(needle);
-	while (contn <= len && *haystack)
-	{
-		if (!(ft_strncmp((char *)haystack, (char *)needle, contn)))
-			return ((char *)haystack);
-		len--;
-		haystack++;
-	}
-	return (NULL);
+	str = malloc(count * size);
+	if (!str)
+		return (0);
+	ft_bzero(str, count * size);
+	return (str);
 }
