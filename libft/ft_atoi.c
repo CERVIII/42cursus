@@ -6,13 +6,12 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 22:59:20 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/01 22:48:22 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/04 11:29:59 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-
 
 int	snumber(unsigned long int number, int sign)
 {
