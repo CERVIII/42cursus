@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:36:25 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/05 14:47:16 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/05 20:56:06 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 		str[cont] = ft_substr(s, start, pos - start);
 		if (!str)
 		{
-			ft_freestring(str, cstr);
+			ft_freestring(str, ft_cstring(s, c));
 			return (NULL);
 		}
 		cont++;
