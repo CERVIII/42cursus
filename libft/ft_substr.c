@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 11:48:35 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/01 12:36:27 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/05 13:58:25 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);
-	if (start >= len)
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	i = 0;
 	while (i < len)
