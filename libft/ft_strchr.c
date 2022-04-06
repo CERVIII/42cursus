@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 19:21:05 by pcervill          #+#    #+#             */
-/*   Updated: 2022/03/25 22:51:41 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:49:14 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	cont = 0;
 	while (s[cont])
 	{
-		if (s[cont] == c)
+		if (s[cont] == (char)c)
 			return ((char *)s + cont);
 		cont++;
 	}
