@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/04/06 20:26:11 by pcervill         ###   ########.fr        #
+#    Updated: 2022/04/06 22:30:22 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,11 @@ SRC		= 	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+BONUS	=	ft_lstnew.c
+
 OBJ 	= 	$(SRC:%.c=%.o)
+
+OBJB	=	$(BONUS:%.c=%.0)
 
 ####COMPILE####
 
@@ -44,6 +48,10 @@ $(NAME): $(OBJ)
 	$(CC) -c $(CFLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJ)
 
+bonus: $(BONUS)
+	$(CC) -c $(CFLAGS) $(BONUS)
+	ar rcs $(NAME) $(OBJB) $(OBJ)
+
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
 	gcc -nostartfiles -shared -o $(SONAME) $(OBJ)
@@ -51,12 +59,12 @@ so:
 ####TARGETS####
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(OBJB)
 
 fclean:
 	$(RM) $(NAME) $(SONAME) 
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(OBJB)
 
-re: fclean all so
+re: fclean all so bonus
 
-.PHONY: fclean all clean re so
+.PHONY: fclean all clean re so bonus

@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 20:11:41 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/06 20:45:34 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/06 22:34:51 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-2147483648", 12);
 	}
 	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
 		ft_putnbr_fd((n *= -1), fd);
+	}
 	else if (n < 10)
 	{
 		ft_putchar_fd((n + 48), fd);
