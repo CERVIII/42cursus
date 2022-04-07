@@ -6,13 +6,13 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 13:19:22 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/04 16:17:44 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/07 12:51:14 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_exit(char s1, char const *set)
+static size_t	ft_exit(char s1, char const *set)
 {
 	size_t	num;
 

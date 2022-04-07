@@ -6,13 +6,13 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 20:58:22 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/06 18:05:42 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/07 12:46:17 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_contm(int n)
+static int	ft_contm(int n)
 {
 	int	contm;
 

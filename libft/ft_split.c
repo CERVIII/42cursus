@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:36:25 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/05 20:56:06 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/07 12:49:45 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_cstring(char const *s, char c)
+static size_t	ft_cstring(char const *s, char c)
 {
 	size_t	cont;
 	size_t	i;
@@ -38,14 +38,14 @@ size_t	ft_cstring(char const *s, char c)
 	return (cont);
 }
 
-size_t	ft_posc(char const *s, char c, size_t pos)
+static size_t	ft_posc(char const *s, char c, size_t pos)
 {
 	while (s[pos] == c && s[pos])
 		pos++;
 	return (pos);
 }
 
-void	ft_freestring(char **str, size_t cstr)
+static void	ft_freestring(char **str, size_t cstr)
 {
 	while (cstr > 0)
 	{

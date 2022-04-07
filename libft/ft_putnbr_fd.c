@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 20:11:41 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/06 22:34:51 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/07 12:44:00 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,22 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-	{
-		write(fd, "-2147483648", 12);
-	}
-	else if (n < 0)
+	long	num;
+
+	num = n;
+	if (num < 0)
 	{
 		ft_putchar_fd('-', fd);
-		ft_putnbr_fd((n *= -1), fd);
+		num *= -1;
 	}
-	else if (n < 10)
+	if (num < 10)
 	{
-		ft_putchar_fd((n + 48), fd);
+		ft_putchar_fd((num + 48), fd);
 		return ;
 	}
 	else
 	{
-		ft_putnbr_fd((n / 10), fd);
-		ft_putnbr_fd((n % 10), fd);
+		ft_putnbr_fd((num / 10), fd);
+		ft_putnbr_fd((num % 10), fd);
 	}
 }

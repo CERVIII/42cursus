@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/04/06 22:30:22 by pcervill         ###   ########.fr        #
+#    Updated: 2022/04/07 14:44:32 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ BONUS	=	ft_lstnew.c
 
 OBJ 	= 	$(SRC:%.c=%.o)
 
-OBJB	=	$(BONUS:%.c=%.0)
+OBJB	=	$(BONUS:%.c=%.o)
 
 ####COMPILE####
 
@@ -50,7 +50,7 @@ $(NAME): $(OBJ)
 
 bonus: $(BONUS)
 	$(CC) -c $(CFLAGS) $(BONUS)
-	ar rcs $(NAME) $(OBJB) $(OBJ)
+	ar rcs $(NAME) $(OBJB)
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
