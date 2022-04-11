@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/04/08 11:40:04 by pcervill         ###   ########.fr        #
+#    Updated: 2022/04/08 14:27:53 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ $(NAME): $(OBJ)
 	$(CC) -c $(CFLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(BONUS)
+bonus: $(NAME) $(BONUS)
 	$(CC) -c $(CFLAGS) $(BONUS)
 	ar rcs $(NAME) $(OBJB)
 
