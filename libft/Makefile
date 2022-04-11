@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/04/08 14:27:53 by pcervill         ###   ########.fr        #
+#    Updated: 2022/04/11 14:12:38 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC		= 	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c
+			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
 
 OBJ 	= 	$(SRC:%.c=%.o)
 
@@ -35,11 +35,13 @@ OBJB	=	$(BONUS:%.c=%.o)
 
 ####COMPILE####
 
-CFLAGS 	= 	-Wall -Wextra -Werror
+CFLAGS 	= 	-Wall -Wextra -Werror 
 
 CC		=	gcc
 
 RM 		= 	rm -f
+
+B		=	.
 
 #####COMPILE TARGET####
 
@@ -49,9 +51,11 @@ $(NAME): $(OBJ)
 	$(CC) -c $(CFLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(NAME) $(BONUS)
-	$(CC) -c $(CFLAGS) $(BONUS)
-	ar rcs $(NAME) $(OBJB)
+bonus: $(B)
+	
+$(B):	$(OBJB) $(OBJ)
+	$(CC) -c $(CFLAGS) $(SRC) $(BONUS)
+	ar rcs $(NAME) $(OBJ) $(OBJB)
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
