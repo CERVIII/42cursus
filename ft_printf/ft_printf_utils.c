@@ -6,9 +6,11 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 18:02:28 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/25 18:05:27 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/26 09:04:25 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

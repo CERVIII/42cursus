@@ -3,14 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+         #
+#    By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2022/04/12 19:24:51 by pcervill         ###   ########.fr        #
-=======
-#    Updated: 2022/04/13 14:24:10 by pcervill         ###   ########.fr        #
->>>>>>> 2486a645505b6d250cc477bd078958f8249a0375
+#    Updated: 2022/04/26 09:20:33 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,12 +27,7 @@ SRC		= 	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-<<<<<<< HEAD
 			ft_lstadd_back.c ft_lstdelone.c
-=======
-			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-			ft_lstmap.c
->>>>>>> 2486a645505b6d250cc477bd078958f8249a0375
 
 OBJ 	= 	$(SRC:%.c=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:49:52 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/25 18:06:00 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/26 11:30:16 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,26 @@ int	ft_putchar(int c)
 
 int	ft_type(va_arg arg, const char str)
 {
-	if (str == s)
+	if (str == 'c')
+		return (ft_putchar(arg));
+	if (str == 's')
 		return (ft_strdup(arg));
+	if (str == 'p')
+		return (ft_hexa(arg));
+	if (str == 'd')
+		return (ft_putnbr(arg));
+	if (str == 'i')
+		return (ft_putnbr(arg));
+	if (str == 'u')
+		return (ft_putnbr(arg));
+	if (str == 'x')
+		return (ft_hexa(arg));
+	if (str == 'X')
+		return (ft_hexa(arg));
+	if (str == '%')
+		return (ft_putchar('%'));
+	else
+		return (0);
 }
 
 int	ft_printf(char const *str, ...)
@@ -35,15 +53,14 @@ int	ft_printf(char const *str, ...)
 	va_start(arg, str);
 	while (str[i])
 	{
-		if (str[i] == %)
+		if (str[i] == '%')
 		{
 			result += ft_type(arg, str[i + 1]);
 			i++;
 		}
 		else
-		{
 			result += ft_putchar(str[i]);
-		}
+		i++;
 	}
 	va_end(arg);
 }
