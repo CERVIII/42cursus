@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
+/*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/08 14:00:03 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/13 13:04:44 by pcervill         ###   ########.fr       */
+/*   Created: 2022/04/25 18:02:28 by pcervill          #+#    #+#             */
+/*   Updated: 2022/04/25 18:05:27 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstclear(t_list **lst, void (del)(void *))
+char	*ft_strdup(const char *s)
 {
-	t_list	*next;
-	if (!lst)
-		return ;
-	while (*lst)
+	char	*str;
+	char	*cstr;
+	size_t	count;
+
+	while (s[count])
+		count++;
+	str = (char *)malloc(count + 1);
+	if (!str)
+		return (0);
+	cstr = str;
+	while (*s)
 	{
-		next = (*lst) -> next;
-		ft_lstdelone(*lst, del);
-		*lst = next;
+		*str = *s;
+		s++;
+		str++;
 	}
-	lst = NULL;
+	*str = '\0';
+	return ((char *)cstr);
 }
