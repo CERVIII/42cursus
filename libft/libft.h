@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:24:43 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/11 14:14:00 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/12 19:17:40 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <ctype.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 typedef	struct	s_list
 {
