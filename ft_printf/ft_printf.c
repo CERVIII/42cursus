@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:49:52 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/26 11:30:16 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/04/27 17:14:18 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,30 @@ int	ft_putchar(int c)
 	return (1);
 }
 
-int	ft_type(va_arg arg, const char str)
+int	ft_type(va_list arg, const char str)
 {
+	int	result;
+
+	result = 0;
 	if (str == 'c')
-		return (ft_putchar(arg));
+		result = ft_putchar(va_arg(arg, int));
 	if (str == 's')
-		return (ft_strdup(arg));
+		result = ft_strdup(va_arg(arg, const char));
 	if (str == 'p')
-		return (ft_hexa(arg));
+		result = ft_dirpoint(va_arg(arg, const char));			//REVISAR
 	if (str == 'd')
-		return (ft_putnbr(arg));
+		result = ft_putnbr(va_arg(arg, int));
 	if (str == 'i')
-		return (ft_putnbr(arg));
+		result = ft_putnbr(va_arg(arg, const char));
 	if (str == 'u')
-		return (ft_putnbr(arg));
+		result = ft_putnbr(va_arg(arg, const char));			//REVISAR
 	if (str == 'x')
-		return (ft_hexa(arg));
+		result = ft_hexa(va_arg(arg, const char));				//REVISAR
 	if (str == 'X')
-		return (ft_hexa(arg));
+		result = ft_hexa(va_arg(arg, const char));				//REVISAR
 	if (str == '%')
-		return (ft_putchar('%'));
-	else
-		return (0);
+		result = ft_putchar('%');
+	return (result);
 }
 
 int	ft_printf(char const *str, ...)
@@ -63,4 +65,10 @@ int	ft_printf(char const *str, ...)
 		i++;
 	}
 	va_end(arg);
+	return (result);
+}
+
+int main(void)
+{
+	ft_printf("Hola que %% %s %c tal estas?", "CUCUU", "A");
 }
