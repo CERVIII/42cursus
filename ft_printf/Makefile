@@ -6,11 +6,11 @@
 #    By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/27 16:56:15 by pcervill          #+#    #+#              #
-#    Updated: 2022/04/27 17:16:52 by pcervill         ###   ########.fr        #
+#    Updated: 2022/05/03 13:38:20 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= 	libft.a
+NAME	= 	libftprintf.a
 
 ####FILES####
 

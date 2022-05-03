@@ -6,39 +6,24 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 17:11:03 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/27 17:17:54 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:39:53 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
+int	ft_putstr(const char *str)
 {
-	write(1, &c, 1);
-	return (1);
-}
+	int i;
 
-char	*ft_strdup(const char *s)
-{
-	char	*str;
-	char	*cstr;
-	size_t	count;
-
-	count = 0;
-	while (s[count])
-		count++;
-	str = (char *)malloc(count + 1);
+	i = 0;
 	if (!str)
-		return (0);
-	cstr = str;
-	while (*s)
-	{
-		*str = *s;
-		s++;
-		str++;
+		str = "(null)";
+	while (str[i])
+	{		ft_putchar(str[i]);
+		i++;
 	}
-	*str = '\0';
-	return ((char *)cstr);
+	return (i);
 }
 
 int	ft_putnbr(int n)
@@ -55,7 +40,7 @@ int	ft_putnbr(int n)
 		}
 		else
 		{
-			num += write(1, '-', 1);
+			num += write(1, "-", 1);
 			n *= -1;
 		}
 	}
@@ -65,15 +50,36 @@ int	ft_putnbr(int n)
 	return (num);
 }
 
-int ft_dirpoint(int c)
+int	ft_putnbr_sn(unsigned int n)
 {
-	
+	unsigned int	num;
+
+	num = 0;
+	if (n > 9)
+		num += ft_putnbr_sn(n / 10);
+	num += ft_putchar((n % 10) + '0');
+	return (num);
 }
 
-int	main(void)
+static int	ft_aux_hexa(unsigned long c, char *hexa)
 {
-	int	c;
+	int i;
 
-	c = 12345;
-	ft_putnbr(c);
+	i = 0;
+	if (c >= 16)
+		i += ft_aux_hexa(c / 16, hexa);
+	i += write(1, hexa + (c % 16), 1);
+	return (i);
 }
+
+int ft_dirpoint(unsigned long c, char *hexa)
+{
+	int i;
+
+	i = 2;
+	ft_putchar('0');
+	ft_putchar('x');
+	i += ft_aux_hexa(c, hexa);
+	return (i);
+}
+
