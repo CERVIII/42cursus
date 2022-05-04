@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:49:52 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/03 14:39:56 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/04 17:40:21 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	ft_hexa(unsigned int c, char *hexa)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (c >= 16)
