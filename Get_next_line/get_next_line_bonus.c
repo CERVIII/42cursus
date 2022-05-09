@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 16:25:28 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/09 15:39:00 by pcervill         ###   ########.fr       */
+/*   Created: 2022/05/09 15:39:40 by pcervill          #+#    #+#             */
+/*   Updated: 2022/05/09 15:51:30 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_read_write(int fd, char *save)
 {
@@ -92,20 +92,20 @@ char	*ft_cleansave(char *save)
 
 char	*get_next_line(int fd)
 {
-	static char	*save;
+	static char	*save[4096];
 	char		*result;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	save = ft_read_write(fd, save);
-	if (!save)
+	save[fd] = ft_read_write(fd, save[fd]);
+	if (!save[fd])
 		return (NULL);
-	result = ft_print(save);
-	save = ft_cleansave(save);
+	result = ft_print(save[fd]);
+	save[fd] = ft_cleansave(save[fd]);
 	return (result);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	int		fd1;
 	char	*str;
@@ -113,13 +113,17 @@ char	*get_next_line(int fd)
 	fd1 = open("text.txt", O_RDONLY);
 	str = get_next_line(fd1);
 	printf("%s\n", str);
+	free(str);
 	str = get_next_line(fd1);
 	printf("%s\n", str);
+	free(str);
 	str = get_next_line(fd1);
 	printf("%s\n", str);
+	free(str);
 	str = get_next_line(fd1);
 	printf("%s\n", str);
+	free(str);
 	close(fd1);
+	system("leaks a.out");
 	return (0);
 }
-*/
