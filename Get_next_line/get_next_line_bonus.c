@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:39:40 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/09 15:51:30 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/09 16:56:01 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ char	*get_next_line(int fd)
 	return (result);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int		fd1;
 	char	*str;
@@ -127,3 +127,4 @@ int	main(void)
 	system("leaks a.out");
 	return (0);
 }
+*/
