@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/04/26 09:20:33 by pcervill         ###   ########.fr        #
+#    Updated: 2022/05/24 13:21:32 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,6 @@ fclean:
 	$(RM) $(NAME) $(SONAME) 
 	$(RM) $(OBJ) $(OBJB)
 
-re: fclean all so bonus
+re: fclean all bonus
 
 .PHONY: fclean all clean re so bonus
