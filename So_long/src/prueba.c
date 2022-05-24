@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   prueba.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:48:40 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/23 18:18:42 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/24 13:36:06 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,7 @@
 #define FL "./Sprites/floor1.xpm"
 #define WL "./Sprites/wall.xpm"
 
-int	main(arg, argv)
-{
-	char	**map;
-
-	map = 
-}
-
-/* int	main(void)
+int	main(void)
 {
 	void	*mlx;
 	void	*img;
@@ -71,4 +64,4 @@ int	main(arg, argv)
 	mlx_put_image_to_window(mlx, mlx_win, img, 4 * 56, 1 * 56);
 	mlx_put_image_to_window(mlx, mlx_win, img, 5 * 56, 1 * 56);
 	mlx_loop(mlx);
-} */
+}
