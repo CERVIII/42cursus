@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:25:28 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/09 15:39:00 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:19:29 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_read_write(int fd, char *save)
 	stread = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!stread)
 		return (NULL);
-	while (!ft_strchr(save, '\n') && sizebuff != 0)
+	while (!ft_strchr2(save, '\n') && sizebuff != 0)
 	{
 		sizebuff = read(fd, stread, BUFFER_SIZE);
 		if (sizebuff == -1)
@@ -30,7 +30,7 @@ char	*ft_read_write(int fd, char *save)
 			return (NULL);
 		}
 		stread[sizebuff] = '\0';
-		save = ft_strjoin(save, stread);
+		save = ft_strjoin2(save, stread);
 	}
 	free (stread);
 	return (save);
@@ -78,7 +78,7 @@ char	*ft_cleansave(char *save)
 		free(save);
 		return (NULL);
 	}
-	newsave = malloc(sizeof(char) * (ft_strlen(save) - cont + 1));
+	newsave = malloc(sizeof(char) * (ft_strlen2(save) - cont + 1));
 	if (!newsave)
 		return (NULL);
 	cont++;

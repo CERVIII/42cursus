@@ -6,13 +6,13 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 17:25:22 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/09 15:37:32 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/25 18:38:09 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen2(const char *str)
 {
 	size_t	cont;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *str)
 	return (cont);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr2(const char *s, int c)
 {
 	int	cont;
 
@@ -40,7 +40,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin2(char *s1, char *s2)
 {
 	char	*str;
 	int		cont;
@@ -55,7 +55,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	}
 	if (!s1 || !s2)
 		return (NULL);
-	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	str = malloc((ft_strlen2(s1) + ft_strlen2(s2) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	while (s1[++cont])

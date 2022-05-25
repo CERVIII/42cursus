@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   check_game.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
+/*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 13:19:05 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/13 13:34:22 by pcervill         ###   ########.fr       */
+/*   Created: 2022/05/25 19:40:40 by pcervill          #+#    #+#             */
+/*   Updated: 2022/05/25 20:10:06 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/so_long.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+int	check_game_map(t_map *map)
 {
-	t_list	*cp;
-
-	if (!lst)
-		return ;
-	while (lst)
-	{
-		cp = lst -> next;
-		f(lst->content);
-		lst = cp;
-	}
+	
 }

@@ -6,49 +6,64 @@
 #    By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/11 16:19:25 by pcervill          #+#    #+#              #
-#    Updated: 2022/05/24 14:11:08 by pcervill         ###   ########.fr        #
+#    Updated: 2022/05/25 20:08:48 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= 	so_long
+#### LIBFT ####
 
-####FILES####
+LIBFT_DIR	=	./lib/libft
 
-LIB_DIR		= ./lib/
-LIB_NAME	= ./lib/lib.a
+LIBFT		=	$(LIBFT_DIR)/libft.a
 
-MLX_DIR		= ./mlx/
+#### GNL ####
 
-SRC		= 	./src/prueba.c
+GNL_DIR		=	./lib/get_next_line
 
-OBJ 	= 	$(SRC:%.c=%.o)
+GNL_N		=	$(GNL_DIR)/gnl.a
 
-####COMPILE####
+SRCGNL		=	get_next_line.c get_next_line_utils.c
 
-CFLAGS 	= 	-Wall -Wextra -Werror 
+OBJGNL		=	$(addprefix $(GNL_DIR)/, $(SRCGNL:.c=.o))
 
-CC		=	gcc
+#### SPRITES ####
 
-RM 		= 	rm -f
+XPM_DIR		=	./Sprites
 
-#####COMPILE TARGET####
+#### SO_LONG ####
 
-all: $(NAME)
+NAME		=	so_long
 
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) -lmlx -framework OpenGL -framework AppKit -o $(NAME)
-	make -C $(LIB_DIR)
-	make -C $(MLX_DIR)
+SRC_DIR		=	./src
+
+SRC			=	so_long.c check_map.c check_game.c
+
+OBJ			=	$(addprefix $(SRC_DIR)/, $(SRC:.c=.o)) $(OBJGNL)
+
+#### FLAGS ####
+
+CFLAGS		=	-Wall -Wextra -Werror
+
+
+$(NAME): $(OBJ) $(LIBFT)
+	$(CC) $(OBJ) -L ./lib/libft -l ft -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 	
-####TARGETS####
+$(LIBFT):
+	make -C $(LIBFT_DIR) bonus
 
+all : $(NAME)
+
+run:
+	./$(NAME) "map.ber"
+	
 clean:
-	$(RM) $(OBJ)
-
-fclean:
-	$(RM) $(NAME) 
-	$(RM) $(OBJ)
+	/bin/rm -f $(OBJ) $(GNL_N) $(OBJGNL)
+	make -C $(LIBFT_DIR) clean
+		
+fclean: clean
+	make -C $(LIBFT_DIR) fclean
+	/bin/rm -f $(NAME) $(GNL_N) $(OBJGNL)
 
 re: fclean all
 
-.PHONY: fclean all clean re
+.PHONY: all clean dclean re

@@ -6,15 +6,11 @@
 #    By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:25:05 by pcervill          #+#    #+#              #
-#    Updated: 2022/04/26 09:20:33 by pcervill         ###   ########.fr        #
+#    Updated: 2022/05/25 17:16:33 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= 	libft.a
-
-####LINUX####
-
-SONAME	=	libft.so
 
 ####FILES####
 
@@ -24,10 +20,12 @@ SRC		= 	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			ft_strrchr.c ft_tolower.c ft_toupper.c ft_atoi.c ft_memcmp.c \
 			ft_strnstr.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+			ft_strcmp.c
 
-BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c ft_lstdelone.c
+BONUS	=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJ 	= 	$(SRC:%.c=%.o)
 
@@ -48,18 +46,12 @@ B		=	.
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -c $(CFLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJ)
 
 bonus: $(B)
 	
-$(B):	$(OBJB) $(OBJ)
-	$(CC) -c $(CFLAGS) $(SRC) $(BONUS)
+$(B):	$(OBJ) $(OBJB)
 	ar rcs $(NAME) $(OBJ) $(OBJB)
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
-	gcc -nostartfiles -shared -o $(SONAME) $(OBJ) $(OBJB)
 
 ####TARGETS####
 
@@ -67,9 +59,9 @@ clean:
 	$(RM) $(OBJ) $(OBJB)
 
 fclean:
-	$(RM) $(NAME) $(SONAME) 
+	$(RM) $(NAME)
 	$(RM) $(OBJ) $(OBJB)
 
-re: fclean all so bonus
+re: fclean all bonus
 
-.PHONY: fclean all clean re so bonus
+.PHONY: fclean all clean re bonus
