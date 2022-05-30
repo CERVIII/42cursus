@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcervill <pcervill@student.42madrid>       +#+  +:+       +#+        */
+/*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 12:38:41 by pcervill          #+#    #+#             */
-/*   Updated: 2022/04/01 13:18:58 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/30 12:26:50 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

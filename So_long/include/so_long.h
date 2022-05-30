@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 12:23:24 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/25 20:09:43 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/30 13:25:41 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ typedef struct s_map
 	int		coin;
 	int		exit;
 	int		floor;
+	int		xmax;
+	int		ymax;
 }	t_map;
 
 int		arg_ok(int argc, char *argv);

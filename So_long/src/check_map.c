@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 19:38:12 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/25 19:53:33 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/30 12:32:24 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,15 @@
 
 int	arg_ok(int argc, char *argv)
 {
-	char	*str;
-
-	if (argc == 2)
-	{	
-		str = ft_strrchr(argv, '.');
-		if (ft_strcmp(str, ".ber") == 0)
-			return (1);
-	}
-	return (0);
+	//if (argc == 2 && ft_strcmp(ft_strrchr(argv, '.'), ".ber") == 0)
+	return ((argc == 2 && ft_strcmp(ft_strrchr(argv, '.'), ".ber") == 0));
 }
 
 void	read_write_fdmap(char *argv, t_map *map)
 {
 	char	*newstr;
 	char	*strmap;
+	char	*strmap2;
 	int		fd;
 
 	fd = open(argv, O_RDONLY);
@@ -40,7 +34,10 @@ void	read_write_fdmap(char *argv, t_map *map)
 		newstr = get_next_line(fd);
 		if (!newstr)
 			break ;
-		strmap = ft_strjoin(strmap, newstr);
+		strmap2 = ft_strdup(strmap);
+		free(strmap);
+		strmap = ft_strjoin(strmap2, newstr);
+		free(strmap2);
 		free(newstr);
 	}
 	map->map = ft_split(strmap, '\n');
