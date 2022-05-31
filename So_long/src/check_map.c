@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 19:38:12 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/30 12:32:24 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/05/31 12:24:52 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	arg_ok(int argc, char *argv)
 {
-	//if (argc == 2 && ft_strcmp(ft_strrchr(argv, '.'), ".ber") == 0)
 	return ((argc == 2 && ft_strcmp(ft_strrchr(argv, '.'), ".ber") == 0));
 }
 
