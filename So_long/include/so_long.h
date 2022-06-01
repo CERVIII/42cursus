@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 12:23:24 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/30 13:25:41 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/06/01 17:55:10 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,31 @@
 # define FL "./Sprites/floor1.xpm"
 # define WL "./Sprites/wall.xpm"
 
+# define NORMAL  "\x1B[0m"
+# define RED  "\x1B[31m"
+# define GREEN  "\x1B[32m"
+# define YELLOW  "\x1B[33m"
+# define BLUE  "\x1B[34m"
+# define MAGENT  "\x1B[35m"
+# define CYAN  "\x1B[36m"
+# define WHITE  "\x1B[37m"
+
+typedef struct s_win
+{
+	void	*mlx;
+	void	*img;
+	void	*mlx_win;
+}	t_win;
+
+typedef struct s_img
+{
+	int		w;
+	int		h;
+}	t_img;
+
 typedef struct s_map
 {
+	//t_img	*img;
 	char	**map;
 	char	*strmap;
 	int		wall;
@@ -47,5 +70,6 @@ typedef struct s_map
 int		arg_ok(int argc, char *argv);
 void	read_write_fdmap(char *argv, t_map *map);
 int		check_game_map(t_map *map);
+void	new_window(t_map *map, t_win *win, t_img *img);
 
 #endif

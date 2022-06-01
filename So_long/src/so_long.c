@@ -6,45 +6,53 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 12:22:37 by pcervill          #+#    #+#             */
-/*   Updated: 2022/05/31 12:58:27 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/06/01 17:52:13 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	leaks(void)
+static void	leaks(void)
 {
 	system("leaks -q so_long");
+}
+
+static void	init_struct(t_map *map, t_img *img)
+{
+	map->coin = 0;
+	map->exit = 0;
+	map->floor = 0;
+	map->person = 0;
+	map->wall = 0;
+	map->xmax = 0;
+	map->ymax = 0;
+	img->h = 0;
+	img->w = 0;
 }
 
 int	main(int argc, char *argv[])
 {
 	t_map	map;
-	int		i;															//eliminar
+	t_win	win;
+	t_img	img;
+	int		i;
 
-	printf("comprobacion argumentos: %d\n", arg_ok(argc, argv[1]));		//eliminar
+	printf("comprobacion argumentos: %d\n", arg_ok(argc, argv[1]));
+	init_struct(&map, &img);
 	if (!arg_ok(argc, argv[1]))
 		return (0);
 	read_write_fdmap(argv[1], &map);
-	check_game_map(&map);
-	/* if (!check_game_map(&map))
-		return (0); */
-	i = 0;																//eliminar
-	printf("copia mapa: \n");											//eliminar
-	while (map.map[i])													//eliminar
-	{																	//eliminar
-		printf("%s\n", map.map[i]);										//eliminar
-		free(map.map[i]);												//eliminar
-		i++;															//eliminar
-	}																	//eliminar
-	free(map.map);														//eliminar
-	printf("Nº de wall:	%d\n", map.wall);								//eliminar
-	printf("Nº de coin:	%d\n", map.coin);								//eliminar
-	printf("Nº de person:	%d\n", map.person);							//eliminar
-	printf("Nº de floor:	%d\n", map.floor);							//eliminar
-	printf("Nº de exit:	%d\n", map.exit);								//eliminar
-	printf("Nº de ymax:	%d\n", map.ymax);								//eliminar
-	printf("Nº de xmax:	%d\n", map.xmax);								//eliminar
-	
+	if (!check_game_map(&map))
+		return (0);
+	new_window(&map, &win, &img);
+	i = 0;
+	printf("copia mapa: \n");
+	while (map.map[i])
+	{										
+		printf("%s\n", map.map[i]);
+		free(map.map[i]);
+		i++;
+	}										
+	free(map.map);
 	atexit(leaks);
 }

@@ -6,7 +6,7 @@
 #    By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/11 16:19:25 by pcervill          #+#    #+#              #
-#    Updated: 2022/05/30 10:48:25 by pcervill         ###   ########.fr        #
+#    Updated: 2022/06/01 13:42:05 by pcervill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ NAME		=	so_long
 
 SRC_DIR		=	./src
 
-SRC			=	so_long.c check_map.c check_game.c
+SRC			=	so_long.c check_map.c check_game.c print_map.c
 
 OBJ			=	$(addprefix $(SRC_DIR)/, $(SRC:.c=.o)) $(OBJGNL)
 
