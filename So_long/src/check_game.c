@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 19:40:40 by pcervill          #+#    #+#             */
-/*   Updated: 2022/06/01 13:26:17 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/06/06 17:45:23 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,21 @@ static void	cont_sprite(t_map *map)
 	int	x;
 	int	y;
 
+	init_struct(map);
 	x = 0;
 	while (map->map[x])
 	{
 		y = 0;
 		while (map->map[x][y])
 		{
-			if (map->map[x][y] == '1')
-				map->wall++;
-			else if (map->map[x][y] == 'C')
+			if (map->map[x][y] == 'C')
 				map->coin++;
 			else if (map->map[x][y] == 'P')
+			{
+				map->xp = x;
+				map->yp = y;
 				map->person++;
-			else if (map->map[x][y] == '0')
-				map->floor = map->xmax * map->ymax;
+			}
 			else if (map->map[x][y] == 'E')
 				map->exit++;
 			y++;

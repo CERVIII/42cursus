@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:48:40 by pcervill          #+#    #+#             */
-/*   Updated: 2022/06/01 13:16:41 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/06/06 12:41:45 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,19 @@
 #define MLX_SYNC_WIN_FLUSH_CMD		2
 #define MLX_SYNC_WIN_CMD_COMPLETED	3
 
+#define ESC 53
+
 #define PJ "./Sprites/Pacman_HD.xpm"
 #define CO "./Sprites/coin.xpm"
 #define EX "./Sprites/portal_close.xpm"
 #define FL "./Sprites/floor1.xpm"
 #define WL "./Sprites/wall.xpm"
+
+int	press(int keycode)
+{
+	printf("%d\n", keycode);
+	return (0);
+}
 
 int	main(void)
 {
@@ -63,5 +71,6 @@ int	main(void)
 	mlx_put_image_to_window(mlx, mlx_win, img, 3 * 56, 1 * 56);
 	mlx_put_image_to_window(mlx, mlx_win, img, 4 * 56, 1 * 56);
 	mlx_put_image_to_window(mlx, mlx_win, img, 5 * 56, 1 * 56);
+	mlx_hook(mlx_win, 2, (1L << 0), press, mlx_win);
 	mlx_loop(mlx);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/24 12:23:24 by pcervill          #+#    #+#             */
-/*   Updated: 2022/06/01 17:55:10 by pcervill         ###   ########.fr       */
+/*   Created: 2022/06/06 18:10:57 by pcervill          #+#    #+#             */
+/*   Updated: 2022/06/06 18:54:15 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,36 +40,55 @@
 # define CYAN  "\x1B[36m"
 # define WHITE  "\x1B[37m"
 
-typedef struct s_win
+# define A 0
+# define S 2
+# define D 1
+# define W 13
+# define LEFT 123
+# define DOWN 125
+# define RIGHT 124
+# define UP 126
+# define ESC 53
+
+/* typedef struct s_win
 {
 	void	*mlx;
 	void	*img;
 	void	*mlx_win;
-}	t_win;
-
-typedef struct s_img
-{
-	int		w;
-	int		h;
-}	t_img;
+}	t_win; */
 
 typedef struct s_map
 {
-	//t_img	*img;
 	char	**map;
 	char	*strmap;
-	int		wall;
 	int		person;
 	int		coin;
 	int		exit;
-	int		floor;
 	int		xmax;
 	int		ymax;
+	int		xp;
+	int		yp;
+	int		w;
+	int		h;
+	void	*mlx;
+	void	*img;
+	void	*mlx_win;
 }	t_map;
+
+/* int		arg_ok(int argc, char *argv);
+void	read_write_fdmap(char *argv, t_map *map);
+int		check_game_map(t_map *map);
+void	init_struct(t_map *map);
+void	new_window(t_map *map, t_win *win);
+void	create_image(t_map	*map, t_win *win);
+int		press(int keycode, t_map *map, t_win *win); */
 
 int		arg_ok(int argc, char *argv);
 void	read_write_fdmap(char *argv, t_map *map);
 int		check_game_map(t_map *map);
-void	new_window(t_map *map, t_win *win, t_img *img);
+void	init_struct(t_map *map);
+void	new_window(t_map *map);
+void	create_image(t_map	*map);
+int		press(int keycode, t_map *map);
 
 #endif
