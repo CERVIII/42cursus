@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 12:22:37 by pcervill          #+#    #+#             */
-/*   Updated: 2022/06/06 18:48:46 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/06/08 15:50:34 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,22 @@ void	init_struct(t_map *map)
 	map->exit = 0;
 }
 
+int	main(int argc, char *argv[])
+{
+	t_map	map;
+
+	if (arg_ok(argc, argv[1]) == 0)
+		return (0);
+	read_write_fdmap(argv[1], &map);
+	if (!check_game_map(&map))
+		return (0);
+	new_window(&map);
+	mlx_hook(map.mlx_win, 2, (1L << 0), press, &map);
+	printf("%sCARGANDO...\n%s", YELLOW, NORMAL);
+	mlx_loop(map.mlx);
+	atexit(leaks);
+}
+
 /* int	main(int argc, char *argv[])
 {
 	t_map	map;
@@ -39,18 +55,3 @@ void	init_struct(t_map *map)
 	mlx_loop(win.mlx);
 	atexit(leaks);
 } */
-
-int	main(int argc, char *argv[])
-{
-	t_map	map;
-
-	if (arg_ok(argc, argv[1]) == 0)
-		return (0);
-	read_write_fdmap(argv[1], &map);
-	if (!check_game_map(&map))
-		return (0);
-	new_window(&map);
-	mlx_hook(map.mlx_win, 2, (1L << 0), press, &map);
-	mlx_loop(map.mlx);
-	atexit(leaks);
-}
