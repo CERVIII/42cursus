@@ -6,7 +6,7 @@
 /*   By: pcervill <pcervill@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 12:22:37 by pcervill          #+#    #+#             */
-/*   Updated: 2022/06/08 15:50:34 by pcervill         ###   ########.fr       */
+/*   Updated: 2022/06/08 19:07:24 by pcervill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ int	main(int argc, char *argv[])
 	t_map	map;
 
 	if (arg_ok(argc, argv[1]) == 0)
+	{
+		printf("%sERROR: argumento invalido o mal nombrado\n%s", RED, NORMAL);
 		return (0);
+	}
 	read_write_fdmap(argv[1], &map);
 	if (!check_game_map(&map))
 		return (0);
