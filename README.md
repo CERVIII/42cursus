@@ -4,22 +4,25 @@
 
 
 
-# 📚 Libft [![pcervill's 42 Libft Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2539128)](https://github.com/JaeSeoKim/badge42) 
+
+# 📚 Libft <img width="75" align="center" alt="125" src="https://github.com/CERVIII/42cursus/assets/99288256/e9013a65-43b0-4ba0-bca6-cab6319cc762">
 ► [Project description and code](https://github.com/CERVIII/Libft)
 <br>
 <br>
 
-# 📝 Printf [![pcervill's 42 ft_printf Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2575046)](https://github.com/JaeSeoKim/badge42)
+# 📝 Printf <img width="75" align="center" alt="100" src="https://github.com/CERVIII/42cursus/assets/99288256/b376f874-4778-462b-a169-cb9f3c2506db">
+
 ► [Project description and code](https://github.com/CERVIII/ft_printf)
 <br>
 <br>
 
-# 📖 Get_Next_Line [![pcervill's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2581812)](https://github.com/JaeSeoKim/badge42)
+# 📖 Get_Next_Line <img width="75" align="center" alt="125" src="https://github.com/CERVIII/42cursus/assets/99288256/e9013a65-43b0-4ba0-bca6-cab6319cc762">
 ► [Project description and code](https://github.com/CERVIII/Get_next_line)
 <br>
 <br>
 
-# 🖥 Born2beroot [![pcervill's 42 Born2beroot Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2586384)](https://github.com/JaeSeoKim/badge42)
+
+# 🖥 Born2beroot <img width="75" align="center" alt="106" src="https://github.com/CERVIII/42cursus/assets/99288256/9c09a483-94f2-449f-916b-933b5075f36c">
 ► [Project description](https://github.com/CERVIII/Born2beroot)
 <br>
 <br>
