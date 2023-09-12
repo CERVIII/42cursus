@@ -31,3 +31,8 @@
 ► [Project description and code](https://github.com/CERVIII/Push_swap)
 <br>
 <br>
+
+# 🔢 Pipex [![pcervill's 42 Born2beroot Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2586384)](https://github.com/JaeSeoKim/badge42)
+► [Project description and code](https://github.com/CERVIII/Pipex)
+<br>
+<br>
