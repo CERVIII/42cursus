@@ -22,17 +22,17 @@
 <br>
 <br>
 
-# 🎮 So_long [![pcervill's 42 Born2beroot Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2586384)](https://github.com/JaeSeoKim/badge42)
+# 🎮 So_long 🛠️
 ► [Project description and code](https://github.com/CERVIII/So_long)
 <br>
 <br>
 
-# 🔢 Push_swap [![pcervill's 42 Born2beroot Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2586384)](https://github.com/JaeSeoKim/badge42)
+# 🔢 Push_swap 🛠️
 ► [Project description and code](https://github.com/CERVIII/Push_swap)
 <br>
 <br>
 
-# 🔢 Pipex [![pcervill's 42 Born2beroot Score](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/project/2586384)](https://github.com/JaeSeoKim/badge42)
+# 🎊 Pipex 🛠️
 ► [Project description and code](https://github.com/CERVIII/Pipex)
 <br>
 <br>
