@@ -1,10 +1,5 @@
 # 42 Cursus progress 👨🏻‍💻 
 
-[![pcervill's 42 stats](https://badge42.vercel.app/api/v2/cled0xuft00060fkzftfc13lu/stats?cursusId=21&coalitionId=66)](https://github.com/JaeSeoKim/badge42)
-
-
-
-
 # 📚 Libft <img width="75" align="center" alt="125" src="https://github.com/CERVIII/42cursus/assets/99288256/e9013a65-43b0-4ba0-bca6-cab6319cc762">
 ► [Project description and code](https://github.com/CERVIII/Libft)
 <br>
