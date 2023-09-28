@@ -36,3 +36,8 @@
 ► [Project description and code](https://github.com/CERVIII/Pipex)
 <br>
 <br>
+
+# 🤔🍴😴 Philo 🛠️
+► [Project description and code](https://github.com/CERVIII/Pipex)
+<br>
+<br>
