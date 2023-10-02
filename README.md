@@ -22,7 +22,7 @@
 <br>
 <br>
 
-# 🎮 So_long 🛠️
+# 🎮 So_long <img width="75" align="center" alt="100" src="https://github.com/CERVIII/42cursus/assets/99288256/b376f874-4778-462b-a169-cb9f3c2506db">
 ► [Project description and code](https://github.com/CERVIII/So_long)
 <br>
 <br>
@@ -38,6 +38,6 @@
 <br>
 
 # 🤔🍴😴 Philo 🛠️
-► [Project description and code](https://github.com/CERVIII/Pipex)
+► [Project description and code](https://github.com/CERVIII/Philo)
 <br>
 <br>
