@@ -41,3 +41,8 @@
 ► [Project description and code](https://github.com/CERVIII/Philo)
 <br>
 <br>
+
+# 🛸 Minishell 🛠️
+► [Project description and code](https://github.com/CERVIII/minishell)
+<br>
+<br>
