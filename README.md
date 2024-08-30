@@ -37,12 +37,37 @@
 <br>
 <br>
 
-# 🤔🍴😴 Philo 🛠️
+# 🤔🍴😴 Philo <img width="75" align="center" alt="100" src="https://github.com/CERVIII/42cursus/assets/99288256/b376f874-4778-462b-a169-cb9f3c2506db">
 ► [Project description and code](https://github.com/CERVIII/Philo)
+<br> 
+<br>
+
+# 🛸 Minishell <img width="75" align="center" alt="95" src="https://github.com/user-attachments/assets/e068ff58-2ba0-446d-b4a9-bf660765224f">
+► [Project description and code](https://github.com/CERVIII/minishell)
 <br>
 <br>
 
-# 🛸 Minishell 🛠️
-► [Project description and code](https://github.com/CERVIII/minishell)
+# ➕➕ CPP module 00 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp00)
+<br>
+<br>
+
+# ➕➕ CPP module 01 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp01)
+<br>
+<br>
+
+# ➕➕ CPP module 02 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp02)
+<br>
+<br>
+
+# ➕➕ CPP module 03 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp03)
+<br>
+<br>
+
+# ➕➕ CPP module 04 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp04)
 <br>
 <br>
