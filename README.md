@@ -71,3 +71,8 @@
 ► [Project description and code](https://github.com/CERVIII/cpp04)
 <br>
 <br>
+
+# 🎮 Cub3d 🛠️
+► [Project description and code](https://github.com/CERVIII/cub3d)
+<br>
+<br>
