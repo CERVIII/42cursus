@@ -72,7 +72,12 @@
 <br>
 <br>
 
-# 🎮 Cub3d 🛠️
+# 🎮 Cub3d <img width="75" align="center" alt="125" src="https://github.com/CERVIII/42cursus/assets/99288256/e9013a65-43b0-4ba0-bca6-cab6319cc762">
 ► [Project description and code](https://github.com/CERVIII/cub3d)
+<br>
+<br>
+
+# 💻 NetPractice 🛠️
+► [Project description and code](https://github.com/CERVIII/netpractice)
 <br>
 <br>
