@@ -87,3 +87,33 @@
 ► [Project description and code](https://github.com/CERVIII/ft_irc)
 <br>
 <br>
+
+# ➕➕ CPP module 05 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp05)
+<br>
+<br>
+
+# ➕➕ CPP module 06 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp06)
+<br>
+<br>
+
+# ➕➕ CPP module 07 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp07)
+<br>
+<br>
+
+# ➕➕ CPP module 08 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp08)
+<br>
+<br>
+
+# ➕➕ CPP module 09 🛠️
+► [Project description and code](https://github.com/CERVIII/cpp09)
+<br>
+<br>
+
+# 📲 Inception 🛠️
+► [Project description and code](https://github.com/CERVIII/inception)
+<br>
+<br>
