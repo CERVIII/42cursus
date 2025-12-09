@@ -47,27 +47,28 @@
 <br>
 <br>
 
-# ➕➕ CPP module 00 🛠️
+# ➕➕ CPP module 00 <img width="75" align="center" alt="80" src="https://github.com/user-attachments/assets/85fae9b7-de2e-4bb6-a756-f01983487592" />
 ► [Project description and code](https://github.com/CERVIII/cpp00)
 <br>
 <br>
 
-# ➕➕ CPP module 01 🛠️
+# ➕➕ CPP module 01 <img width="75" align="center" alt="80" src="https://github.com/user-attachments/assets/85fae9b7-de2e-4bb6-a756-f01983487592" />
 ► [Project description and code](https://github.com/CERVIII/cpp01)
 <br>
 <br>
 
-# ➕➕ CPP module 02 🛠️
+# ➕➕ CPP module 02 <img width="75" align="center" alt="80" src="https://github.com/user-attachments/assets/85fae9b7-de2e-4bb6-a756-f01983487592" />
 ► [Project description and code](https://github.com/CERVIII/cpp02)
 <br>
 <br>
 
-# ➕➕ CPP module 03 🛠️
+# ➕➕ CPP module 03 <img width="75" align="center" alt="80" src="https://github.com/user-attachments/assets/85fae9b7-de2e-4bb6-a756-f01983487592" />
 ► [Project description and code](https://github.com/CERVIII/cpp03)
 <br>
 <br>
 
-# ➕➕ CPP module 04 🛠️
+# ➕➕ CPP module 04 <img width="75" align="center" alt="80" src="https://github.com/user-attachments/assets/85fae9b7-de2e-4bb6-a756-f01983487592" />
+
 ► [Project description and code](https://github.com/CERVIII/cpp04)
 <br>
 <br>
@@ -77,7 +78,12 @@
 <br>
 <br>
 
-# 💻 NetPractice 🛠️
+# 💻 NetPractice <img width="75" align="center" alt="100" src="https://github.com/CERVIII/42cursus/assets/99288256/b376f874-4778-462b-a169-cb9f3c2506db">
 ► [Project description and code](https://github.com/CERVIII/netpractice)
+<br>
+<br>
+
+# 📲 FT_IRC 🛠️
+► [Project description and code](https://github.com/CERVIII/ft_irc)
 <br>
 <br>
